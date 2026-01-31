@@ -6,9 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -38,10 +36,7 @@
       margin-bottom: 15px;
     }
 
-    h1 {
-      margin: 10px 0;
-      color: #2c3e50;
-    }
+    h1 { margin: 10px 0; color: #2c3e50; }
 
     p {
       color: #555;
@@ -49,23 +44,19 @@
       font-size: 15px;
     }
 
-    .cta {
-      margin: 25px 0;
-    }
+    .cta { margin: 25px 0; }
 
     .cta a {
       display: inline-block;
       background: #2c3e50;
-      color: white;
+      color: #fff;
       text-decoration: none;
       padding: 14px 22px;
       border-radius: 8px;
       font-size: 15px;
     }
 
-    .cta a:hover {
-      background: #1a252f;
-    }
+    .cta a:hover { background: #1a252f; }
 
     h2 {
       margin-top: 30px;
@@ -110,9 +101,7 @@
       cursor: pointer;
     }
 
-    button:hover {
-      background: #1a252f;
-    }
+    button:hover { background: #1a252f; }
 
     footer {
       margin-top: 25px;
@@ -120,10 +109,53 @@
       color: #777;
       text-align: center;
     }
+
+    /* WhatsApp Floating Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #25D366;
+      color: #fff;
+      font-size: 26px;
+      padding: 14px 16px;
+      border-radius: 50%;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
+
+    .whatsapp-float:hover {
+      background-color: #1ebe5d;
+    }
   </style>
+
+  <!-- Chatbase Bot -->
   <script>
-(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="r683Q-EtwayyI8nTO21Df";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
-</script>
+  (function(){
+    if(!window.chatbase||window.chatbase("getState")!=="initialized"){
+      window.chatbase=(...arguments)=>{
+        if(!window.chatbase.q){window.chatbase.q=[]}
+        window.chatbase.q.push(arguments)
+      };
+      window.chatbase=new Proxy(window.chatbase,{
+        get(target,prop){
+          if(prop==="q"){return target.q}
+          return(...args)=>target(prop,...args)
+        }
+      })
+    }
+    const onLoad=function(){
+      const script=document.createElement("script");
+      script.src="https://www.chatbase.co/embed.min.js";
+      script.id="r683Q-EtwayyI8nTO21Df";
+      script.domain="www.chatbase.co";
+      document.body.appendChild(script)
+    };
+    if(document.readyState==="complete"){onLoad()}
+    else{window.addEventListener("load",onLoad)}
+  })();
+  </script>
 </head>
 
 <body>
@@ -142,8 +174,8 @@
     <p><strong>Fast • Affordable • Professional</strong></p>
 
     <div class="cta">
-      https://wa.me/254742871343?text=Hello%20Infinity%20Creator%20👋%20I%20need%20a%20website.%20Please%20share%20pricing%20and%20next%20steps.
-
+      <a href="https://wa.me/254742871343?text=Hello%20Infinity%20Creator%20I%20need%20a%20website.%20Please%20share%20pricing%20and%20next%20steps."
+         target="_blank">
         💬 Chat on WhatsApp
       </a>
     </div>
@@ -170,10 +202,7 @@
 
     <h2>Contact Me</h2>
 
-    <form 
-      action="https://formsubmit.co/josephmungai061@gmail.com" 
-      method="POST">
-
+    <form action="https://formsubmit.co/josephmungai061@gmail.com" method="POST">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_subject" value="New Website Inquiry">
       <input type="hidden" name="_next" value="thank-you.html">
@@ -190,31 +219,14 @@
     </footer>
 
   </div>
-<!-- WhatsApp Floating Button -->
-https://wa.me/254742871343?text=Hello%20Infinity%20Creator%20👋%20I%20need%20a%20website.%20Please%20share%20pricing%20and%20next%20steps.
 
-  💬
-</a>
-
-<style>
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  background-color: #25D366;
-  color: rgba(255, 255, 255, 0.982);
-  font-size: 28px;
-  padding: 14px 16px;
-  border-radius: 50%;
-  text-decoration: none;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  z-index: 1000;
-}
-.whatsapp-float:hover {
-  background-color: #1ebe5d;
-}
-</style>
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/254742871343?text=Hello%20Infinity%20Creator%20I%20need%20a%20website.%20Please%20share%20pricing%20and%20next%20steps."
+     class="whatsapp-float"
+     target="_blank"
+     aria-label="Chat on WhatsApp">
+     💬
+  </a>
 
 </body>
 </html>
- 
